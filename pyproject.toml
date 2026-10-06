@@ -1,6 +1,15 @@
 [project]
 name = "domain-contract-0910033-019"
 version = "0.1.0"
-description = "退货索赔协同的领域约定与校验工具"
+description = "退货索赔协同的领域约定、校验工具与事件溯源后端"
 requires-python = ">=3.11"
 dependencies = []
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+return-claim-server = "return_claim.__main__:main"
